@@ -2,7 +2,7 @@
 │                       ✎┊ 42 SCHOOL
 │╭────────────────────────────────────────────────────────────────╯
 ││
-││  Piscine
+││  Piscine<br>
 ||  The Piscine is an intensive one-month phase that serves as an introduction 
 ||  to C programming and the command line. During this stage, I worked on daily
 ||  projects designed to solidify my knowledge in:
