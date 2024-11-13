@@ -1,6 +1,6 @@
 ╭──────────────────────────┈ •°•↷<br>
-│                       ✎┊ 42 SCHOOL<br>
-│╭─────────────────────────────────────────────────────────────╯<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;✎┊ 42 SCHOOL<br>
+│╭───────────────────────────────────────────────────────────╯<br>
 ││<br>
 ││  Piscine<br>
 ||  The Piscine is an intensive one-month phase that serves as an introduction<br>
