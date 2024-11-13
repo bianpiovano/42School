@@ -6,7 +6,7 @@
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 17:59:59 by bpiovano          #+#    #+#             */
-/*   Updated: 2024/11/07 18:15:04 by bpiovano         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:44:10 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char digit;
+	char	digit;
 
 	if (n == -2147483648)
 	{
@@ -40,3 +40,10 @@ void	ft_putnbr_fd(int n, int fd)
 		}
 	}
 }
+/*
+Takes :
+an integer to output (n)
+a file descriptor on which to write (fd)
+Outputs the integer n to the given file descriptor
+Does not return anything
+*/

@@ -6,7 +6,7 @@
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 20:37:07 by bpiovano          #+#    #+#             */
-/*   Updated: 2024/11/06 15:47:08 by bpiovano         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:25:40 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,14 +75,13 @@ static int	to_trim(const char *set, char c)
 	}
 	return (0);
 }
-
 /*
-to_trim: compares each character to set
-returns 1 if equal, 0 if there is no coincidence
-
-new_str: creates a new string copying a specific
-section of s1 (start and length)
-
-strtrim: gets s1 length, loops at the beginning 
-and end of s1. Returns a new string.
+* Takes : 
+* a string to be trimmed (c)
+* a set of characters to trim (set)
+* Allocates and returns a copy of s1 with the characters
+* specified in set removed from the beginning
+* and the end of the string
+* Returns null if the allocation fails
+* Returns : the trimmed string
 */

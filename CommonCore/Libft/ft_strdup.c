@@ -6,7 +6,7 @@
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:04:59 by bpiovano          #+#    #+#             */
-/*   Updated: 2024/11/06 15:45:28 by bpiovano         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:11:59 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ char	*ft_strdup(const char *s)
 	duplicate[i] = '\0';
 	return (duplicate);
 }
-
 /*
-Returns a pointer to a new string which is a
-duplicate of the string s.
-Memory for the new string is obtained with malloc(3)
+* Takes : a pointer to a string (const char) (s)
+* Duplicates one string creating a new string
+* Assigns memory for the new string / if it fails returns null
+* Returns : a pointer to the new string
 */

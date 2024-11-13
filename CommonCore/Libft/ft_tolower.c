@@ -6,7 +6,7 @@
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:35:47 by bpiovano          #+#    #+#             */
-/*   Updated: 2024/11/06 15:54:57 by bpiovano         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:27:16 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int	ft_tolower(int c)
 	}
 	return (c);
 }
-
 /*
-Lowercase a char,
-takes it as an int
+* Takes an int (c)
+* Makes it lowcase
+* Returns (c)
 */

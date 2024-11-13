@@ -6,7 +6,7 @@
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 19:14:01 by bpiovano          #+#    #+#             */
-/*   Updated: 2024/11/06 15:45:20 by bpiovano         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:10:23 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,15 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
 /*
-Returns a pointer to the first occurrence
-of the character C in the string S
-(Turns S into char)
+* Takes :
+* a pointer to a string of characters (s)
+* an int as character to be searched (c)
+* Searches for a character 
+* Returns a pointer to the first occurrence 
+* of the character c in the string s 
+* (turned into a char *)
+* If the character searched is “\0”
+* it returns a pointer to the end of the string
+* if it doesn’t find the character, returns null
 */

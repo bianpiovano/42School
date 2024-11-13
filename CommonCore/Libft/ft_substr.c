@@ -6,7 +6,7 @@
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:34:00 by bpiovano          #+#    #+#             */
-/*   Updated: 2024/11/06 15:36:50 by bpiovano         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:26:51 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	return (str);
 }
-
 /*
-Allocate (with malloc(3)) and return
-a new string from the string s.
-This new string starts at index 'start'
-and has a maximum size of 'len'.
+* Takes : 
+* a pointer to a string (char const) (s),
+* which to create a substring
+* an int (to set a point of start) (start)
+* a size number for length
+* Allocates and returns a substring from the string 
+* If the allocation fails returns null
+* The substring begins at index start
+* and is of maximum size len
+* Returns : the substring
 */

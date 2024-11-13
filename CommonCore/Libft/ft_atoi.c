@@ -6,7 +6,7 @@
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 15:34:28 by bpiovano          #+#    #+#             */
-/*   Updated: 2024/11/06 20:53:08 by bpiovano         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:41:15 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int	ft_isspace(int c)
 	}
 	return (0);
 }
+
 int	ft_atoi(const char *nptr)
 {
 	int	i;
@@ -48,3 +49,12 @@ int	ft_atoi(const char *nptr)
 	result *= sign;
 	return (result);
 }
+/*
+ * Takes :
+ * a pointer to a string (const char) (nptr)
+ * Converts the initial portion of the string
+ * pointed to by nptr to int
+ * Checks if it has spaces
+ * Checks if it has negative/positive signs
+ * Returns: an int
+ */

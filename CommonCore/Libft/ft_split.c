@@ -6,7 +6,7 @@
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 15:22:14 by bpiovano          #+#    #+#             */
-/*   Updated: 2024/11/06 15:45:12 by bpiovano         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:42:03 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ static void	ft_initiative_vars(size_t *i, int *j, int *s_word)
 	*j = 0;
 	*s_word = -1;
 }
+
 static void	*ft_free(char **strs, int count)
 {
 	int	i;
@@ -64,6 +65,7 @@ static void	*ft_free(char **strs, int count)
 	free(strs);
 	return (NULL);
 }
+
 static char	*fill_word(const char *str, int start, int end)
 {
 	char	*word;
@@ -103,10 +105,14 @@ static int	word_count(const char *str, char c)
 	}
 	return (count);
 }
-
 /*
-Allocates (with malloc(3))
-returns an array of strings
-by splitting 's' using 'c'
-as delimiter. Ends with a NULL pointer
+* Takes :
+* a string to be split (s)
+* a delimiter character (c)
+* Allocates and returns an array of strings obtained
+* by splitting s using the character c as a delimiter
+* Returns null if the allocation fails
+* The array must end with a null pointer
+* (Reminder to use free after this function)
+* Returns an array of pointers to char
 */

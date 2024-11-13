@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtiteri.c                                     :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:18:03 by bpiovano          #+#    #+#             */
-/*   Updated: 2024/11/07 16:47:46 by bpiovano         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:39:32 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned int i;
+	unsigned int	i;
 
 	i = 0;
 	while (s[i])
@@ -23,3 +23,12 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
+/*
+ * Takes :
+ * a string on which to iterate (s)
+ * a function to apply to each character(f)
+ * Does not return anything (compared to strmapi)
+ * Applies the function f on each character of the string
+ * passed as argument, passing its index as first argument
+ * Each character is passed by address to f to be modified if necessary
+ */

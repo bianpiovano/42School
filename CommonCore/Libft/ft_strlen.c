@@ -6,7 +6,7 @@
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 18:36:53 by bpiovano          #+#    #+#             */
-/*   Updated: 2024/11/06 15:46:09 by bpiovano         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:17:22 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,10 @@ size_t	ft_strlen(const char *str)
 	}
 	return (i);
 }
+/*
+* Takes an string
+* Counts string length
+* Returns string length
+* Does not count the null
+* character at the end
+*/

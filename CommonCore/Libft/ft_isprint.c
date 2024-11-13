@@ -6,7 +6,7 @@
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 18:34:33 by bpiovano          #+#    #+#             */
-/*   Updated: 2024/11/08 17:50:54 by bpiovano         ###   ########.fr       */
+/*   Updated: 2024/11/09 16:15:41 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,8 @@ int	ft_isprint(int c)
 		return (0);
 	}
 }
+/*
+* Takes an int (c)
+* Returns 1 if is a printable character
+* Returns 0 if it is not 
+*/

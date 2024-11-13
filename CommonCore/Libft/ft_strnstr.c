@@ -6,7 +6,7 @@
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 14:57:31 by bpiovano          #+#    #+#             */
-/*   Updated: 2024/11/08 20:49:54 by bpiovano         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:23:37 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,13 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
 /*
-Locates the first occurrence of the nterminated string
-little in the string big, where not more than Len
-characters are searched.
+* Takes:
+* a pointer to a string of character (big)
+* a pointer to a string of character (little)
+* Locates the first occurrence of the null-terminated
+* string little in the string big
+* If little is empty, it returns a pointer
+* to the first position of big
+* No more than len characters are searched
 */

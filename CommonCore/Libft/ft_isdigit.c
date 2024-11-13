@@ -6,7 +6,7 @@
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 13:34:59 by bpiovano          #+#    #+#             */
-/*   Updated: 2024/11/08 17:51:15 by bpiovano         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:26:00 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,8 @@ int	ft_isdigit(int c)
 	}
 	return (0);
 }
+/*
+* Takes an int (c)
+* Returns 1 if is a digit
+* Returns 0 if it is not 
+*/

@@ -6,7 +6,7 @@
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 20:21:35 by bpiovano          #+#    #+#             */
-/*   Updated: 2024/11/06 15:57:01 by bpiovano         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:27:37 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int	ft_toupper(int c)
 	}
 	return (c);
 }
-
 /*
-Uppercase a char,
-takes it as an int
+* Takes an int (c)
+* Makes it uppercase
+* Returns (c)
 */

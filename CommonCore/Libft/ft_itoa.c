@@ -6,7 +6,7 @@
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:25:37 by bpiovano          #+#    #+#             */
-/*   Updated: 2024/11/07 14:41:07 by bpiovano         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:43:04 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ static char	*pre_conv(int len)
 	tmp[0] = '0';
 	return (tmp);
 }
+
 static int	int_len(long nbr)
 {
 	int	count;
@@ -71,3 +72,12 @@ static int	int_len(long nbr)
 	}
 	return (count);
 }
+/*
+* Takes : an int (c) to convert
+* Allocates and returns a string representing
+* the integer received as an argument
+* Negatives numbers must be handled
+* Handle min and max numbers turning int into long
+* Returns null if the allocation fails 
+* Returns : the string representing the integer
+*/

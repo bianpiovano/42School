@@ -6,7 +6,7 @@
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:58:15 by bpiovano          #+#    #+#             */
-/*   Updated: 2024/11/06 15:43:11 by bpiovano         ###   ########.fr       */
+/*   Updated: 2024/11/12 15:39:51 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,16 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
 /*
-Searches the first count bytes of buf
-for the first occurrence of C converted
-to an unsigned character. The search continues until
-it finds C or examines count bytes
+* Takes :
+* a pointer to a string of characters (s)
+* an int (c)
+* a size number (n)
+* Searches the first occurrence of a character c in
+* the first n bytes of a block of memory pointed to by s
+* The search continues until it finds c or examines count bytes
+* It doesn’t stop at a null terminator
+* Converting to unsigned char is important to ensure
+* that values ​​are compared correctly on a byte-by-byte basis
+* Returns : a pointer to the byte of memory found
 */

@@ -6,7 +6,7 @@
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 11:04:57 by bpiovano          #+#    #+#             */
-/*   Updated: 2024/11/06 15:51:44 by bpiovano         ###   ########.fr       */
+/*   Updated: 2024/11/12 15:51:08 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,12 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-
 /*
-Fills the first n bytes of the memory area
-pointed to by s with the constant byte c.
-Returns a pointer to the memory area s.
+* Takes :
+* a pointer to the block of memory to fill (s)
+* a value to fill up the memory (c ) 
+* a size number of bytes to be occupied (n) 
+* Fills the first n bytes of the memory area 
+* pointed to by s with the constant byte c
+* Returns : a pointer to the memory area s
 */

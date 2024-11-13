@@ -6,7 +6,7 @@
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 17:14:55 by bpiovano          #+#    #+#             */
-/*   Updated: 2024/11/07 17:27:29 by bpiovano         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:43:45 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i])
@@ -23,3 +23,10 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
+/*
+ * Takes :
+ * a string to output (s)
+ * a file descriptor on which to write (fd)
+ * Outputs the string s to the given file descriptor
+ * Does not return anything
+ */

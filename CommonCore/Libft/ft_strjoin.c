@@ -6,7 +6,7 @@
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 20:16:55 by bpiovano          #+#    #+#             */
-/*   Updated: 2024/11/06 21:28:55 by bpiovano         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:14:33 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[j] = '\0';
 	return (str);
 }
-
 /*
-Allocates (with malloc(3)) and returns a new
-string, which is the result of the concatenation
-of ’s1’ and ’s2’.
+* Takes :
+* a pointer to the prefix string (s1)
+* a pointer to the suffix string (s2) 
+* Allocates and returns a new string,
+* which is the result of the concatenation(s1 and s2)
+* Returns null if the allocation fails
+* Returns : the substring
 */

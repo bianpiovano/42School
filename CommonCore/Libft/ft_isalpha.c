@@ -6,7 +6,7 @@
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:56:54 by bpiovano          #+#    #+#             */
-/*   Updated: 2024/11/08 17:49:26 by bpiovano         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:23:44 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,9 @@ int	ft_isalpha(int c)
 	}
 	return (0);
 }
+
+/*
+* Takes an int (c)
+* Returns 1 if is an alphabetic character
+* Returns 0 if it is not 
+*/
