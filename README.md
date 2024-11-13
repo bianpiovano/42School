@@ -1,6 +1,6 @@
 ╭──────────────────────────┈ •°•↷<br>
 │                       ✎┊ 42 SCHOOL<br>
-│╭────────────────────────────────────────────────────────────────╯<br>
+│╭─────────────────────────────────────────────────────────────╯<br>
 ││<br>
 ││  Piscine<br>
 ||  The Piscine is an intensive one-month phase that serves as an introduction<br>
@@ -26,13 +26,7 @@
 ||  • Born2BeRoot: A system administration project to set up a virtual machine.<br>
 ||  • Other projects in C++ and advanced shell scripting.<br>
 ││<br>
-││<br>
-││<br>
-││<br>
-││<br>
-││<br>
-││<br>
-│╰─────────────────────── · · · · ✦
+│╰───────────────────────────── · · · · ✦
 
 ❀° ┄─────────╮<br>
 ┊┊┊┊┊┊⇣❥42 School<br>
