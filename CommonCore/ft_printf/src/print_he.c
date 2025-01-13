@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printun.c                                          :+:      :+:    :+:   */
+/*   print_he.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/06 17:55:47 by bpiovano          #+#    #+#             */
-/*   Updated: 2025/01/08 15:15:04 by bpiovano         ###   ########.fr       */
+/*   Created: 2025/01/06 15:02:27 by bpiovano          #+#    #+#             */
+/*   Updated: 2025/01/11 17:51:22 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
 
-int	printun(unsigned int n)
+int	print_he(unsigned long n)
 {
-	int			count;
-	int			div;
-	int			mod;
-	static char	*digits = "0123456789";
+	int				count;
+	unsigned long	div;
+	unsigned long	mod;
+	static char		*symbols = "0123456789abcdef";
 
 	count = 0;
-	div = n / 10;
-	mod = n % 10;
-	if (n >= 10)
+	if (n >= 16)
 	{
-		count += printdi(div);
+		div = n / 16;
+		mod = n % 16;
+		count += print_he(div);
+		count += print_ch(symbols[mod]);
 	}
-	count += printch(digits[mod]);
+	else
+		count += print_ch(symbols[n % 16]);
 	return (count);
 }

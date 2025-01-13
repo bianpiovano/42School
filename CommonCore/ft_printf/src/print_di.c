@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printdi.c                                          :+:      :+:    :+:   */
+/*   print_di.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 15:01:32 by bpiovano          #+#    #+#             */
-/*   Updated: 2025/01/08 15:38:07 by bpiovano         ###   ########.fr       */
+/*   Updated: 2025/01/11 22:19:27 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
 
-int	printdi(int n)
+int	print_di(int n)
 {
 	int			count;
 
 	count = 0;
 	if (n < 0)
 	{
-		count += printch('-');
+		count += print_ch('-');
 		n = -n;
 	}
-	count += printun(n);
+	count += print_un(n);
 	return (count);
 }

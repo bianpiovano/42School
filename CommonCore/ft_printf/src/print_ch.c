@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printpo.c                                          :+:      :+:    :+:   */
+/*   print_ch.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/06 15:04:36 by bpiovano          #+#    #+#             */
-/*   Updated: 2025/01/08 14:50:59 by bpiovano         ###   ########.fr       */
+/*   Created: 2025/01/11 17:20:58 by bpiovano          #+#    #+#             */
+/*   Updated: 2025/01/11 17:21:41 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
 
-int	printpo(void *ptr)
+int	print_ch(int c)
 {
-	int	count;
-
-	count = 0;
-	if (ptr == NULL)
-		count += printst("(nil)");
-	else
-	{
-		count += printst("0x");
-		count += printhe((unsigned long)ptr);
-	}
-	return (count);
+	ft_putchar(c);
+	return (1);
 }
