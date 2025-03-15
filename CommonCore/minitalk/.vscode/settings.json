@@ -1,0 +1,8 @@
+{
+	"files.associations": {
+		"minitalk.h": "c",
+		"system_error": "c",
+		"PRUEBA.C": "cpp"
+	},
+	"C_Cpp.errorSquiggles": "disabled"
+}
