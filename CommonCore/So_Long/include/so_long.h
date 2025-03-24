@@ -38,17 +38,25 @@ typedef struct {
     void *mlx;
     void *window;
     void *tile;
+    void    *counter;
     void *wall;
     void *player[4];
     void *collectible;
+    void *exit;
     char **map;
     int image_width;
+    int counter_width;
     int image_height;
     int map_width;
     int map_height;
     int player_x;
     int player_y;
     int direction;
+    int total_collectibles;
+    int collected_collectibles;
+    int pressed_key;
+    int move_count;
+    int frame_count;
 } t_game;
 
 //  ────── ⑅ ♡ ⑅  ──────
@@ -70,14 +78,59 @@ void draw_walls(t_game *game);
 void draw_player(t_game *game);
 // ╰┈➤ drawing player
 
+void draw_collectibles(t_game *game);
+//  ╰┈➤ drawing raindrop collectibles
+
+void draw_exit(t_game *game);
+// ╰┈➤ draw exit door
+
 int close_window(t_game *game);
 // ╰┈➤ close window
 
 int key_press(int keycode, t_game *game);
+// ╰┈➤ pressing the key
+
+int key_release(int keycode, t_game *game);
+// ╰┈➤ releasing the key
 
 int get_map_dimensions(const char *filename, int *width, int *height, t_game *game);
+// ╰┈➤ calculate map dimensions for the window
 
-void spawn_collectibles(t_game *game);
+void count_collectibles(t_game *game);
+// ╰┈➤ count collectibles
+
+void find_player_position(t_game *game);
+// ╰┈➤ find player position to 
+
+void check_victory(t_game *game);
+// ╰┈➤ check victory to make the exit change
+
+void compute_new_position(t_game *game, int *new_x, int *new_y);
+// ╰┈➤ computing new position
+
+int process_tile(t_game *game, int new_x, int new_y);
+// ╰┈➤ process tiles of the floor
+
+void update_moves_display(t_game *game);
+// ╰┈➤ update moves in the screen
+
+int update_display(t_game *game);
+// ╰┈➤ update display screen 
+
+int init_game(t_game *game, int argc, char *argv[]);
+// ╰┈➤ initializing game
+
+int init_window(t_game *game);
+// ╰┈➤ initializing window
+
+int load_resources(t_game *game);
+// ╰┈➤ loading resources
+
+void draw_scene(t_game *game);
+// ╰┈➤ draw scene(walls, tiles, exit, collectibles)
+
+void setup_hooks(t_game *game);
+// ╰┈➤ setting up hooks
 
 //  ────── ⑅ ♡ ⑅  ──────
 //   ℂ𝕠𝕣𝕖 𝔽𝕦𝕟𝕔𝕥𝕚𝕠𝕟   //
@@ -85,5 +138,4 @@ void spawn_collectibles(t_game *game);
 // main
 
 #endif
-
 //  ૮ ˶ᵔ ᵕ ᵔ˶ ა                               ✧₊⁺✧₊ ᓚᘏᗢ
