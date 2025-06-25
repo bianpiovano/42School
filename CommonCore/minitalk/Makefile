@@ -12,6 +12,9 @@ SERVER = server
 CLIENT = client
 NAME	= MiniTalk
 
+BONUS_SERVER = bonus_server
+BONUS_CLIENT = bonus_client
+
 # 𝔻𝕚𝕣𝕖𝕔𝕥𝕠𝕣𝕚𝕖𝕤 #
 # ───୨ৎ──── ⑅ ♡ ⑅  ────୨ৎ────
 OBJ_DIR = objs
@@ -22,10 +25,15 @@ LIB_DIR = library
 SERVER_SRC = src/server.c
 CLIENT_SRC = src/client.c
 
+BONUS_SERVER_SRC = bonus/server_bonus.c
+BONUS_CLIENT_SRC = bonus/client_bonus.c
+
 # 𝕆𝕓𝕛𝕖𝕔𝕥 𝔽𝕚𝕝𝕖𝕤 #
 # ───୨ৎ──── ⑅ ♡ ⑅  ────୨ৎ────
 SERVER_OBJ = $(SERVER_SRC:%.c=$(OBJ_DIR)/$(SERVER)/%.o)
 CLIENT_OBJ = $(CLIENT_SRC:%.c=$(OBJ_DIR)/$(CLIENT)/%.o)
+BONUS_SERVER_OBJ = $(BONUS_SERVER_SRC:%.c=$(OBJ_DIR)/$(BONUS_SERVER)/%.o)
+BONUS_CLIENT_OBJ = $(BONUS_CLIENT_SRC:%.c=$(OBJ_DIR)/$(BONUS_CLIENT)/%.o)
 
 # ╭───────── · · ୨୧ · · ─────────╮
 #  Ｃｏｍｐｉｌａｔｉｏｎ Ｖａｒｉａｂｌｅｓ
@@ -51,6 +59,7 @@ MFA_LIB_HEADER = $(OBJ_DIR)/mfa_library_header
 # 𝕄𝕒𝕟𝕕𝕒𝕥𝕠𝕣𝕪 𝔹𝕦𝕚𝕝𝕕 #
 # ───୨ৎ──── ⑅ ♡ ⑅  ────୨ৎ────
 mandatory: $(MFA_BP_MANDATORY) library $(MFA_MANDATORY_HEADER) $(CLIENT) $(SERVER)
+bonus: $(MFA_BP_MANDATORY) library $(MFA_MANDATORY_HEADER) $(BONUS_CLIENT) $(BONUS_SERVER)
 
 #⋆✴︎˚｡⋆✴︎˚｡⋆｡⋆✴︎˚｡⋆⋆✴︎˚｡⋆⋆✴︎˚｡⋆⋆✴︎˚｡⋆⋆✿˚｡⋆⋆✴︎˚⋆✴⋆｡⋆⋆✴︎˚｡⋆✴︎
 #        Main Building Commands            
@@ -60,6 +69,12 @@ $(CLIENT): $(CLIENT_SRC)
 
 $(SERVER): $(SERVER_SRC)
 	$(CC) $(CFLAGS) $(INCS) -o $(SERVER) $(SERVER_SRC) $(ADD_LIB)
+
+$(BONUS_CLIENT): $(BONUS_CLIENT_SRC)
+	$(CC) $(CFLAGS) $(INCS) -o $(BONUS_CLIENT) $(BONUS_CLIENT_SRC) $(ADD_LIB)
+
+$(BONUS_SERVER): $(BONUS_SERVER_SRC)
+	$(CC) $(CFLAGS) $(INCS) -o $(BONUS_SERVER) $(BONUS_SERVER_SRC) $(ADD_LIB)
 
 #  𝕄𝕪 𝕃𝕚𝕓𝕣𝕒𝕣𝕪 ℂ𝕠𝕞𝕞𝕒𝕟𝕕𝕤  #
 # ───୨ৎ──── ⑅ ♡ ⑅  ────୨ৎ────
@@ -90,7 +105,7 @@ endef
 clean: library_clean
 	@if [ -d "(OBJ_DIR)" ]; then \
 		echo "\n───$(MYPINK)୨ৎ$(RESET)──── $(MYPINK)Cleaning $(RESET) -» $(NAME) «- $(RESET)───$(MYPINK)୨ৎ$(RESET)────$(RESET)"; \
-		$(RM) $(OBJ_DIR); \
+		$(RM) $(OBJ_DIR);\
 		echo "$(MYGREEN)⋆ ˚｡⋆ $(RESET) -» $(NAME) «- $(RESET)objects removed $(MYGREEN)✔$(RESET)"; \
 		else \
 			echo "Nothing to be done for 'clean'."; \
@@ -110,6 +125,14 @@ fclean: library_fclean
 		if [ -f "$(SERVER)" ]; then \
 			$(RM) $(SERVER); \
 			echo "$(MYGREEN)⋆ ˚｡⋆ $(RESET) -» $(SERVER) «- $(RESET)file removed $(MYGREEN)✔$(RESET)"; \
+		fi; \
+		if [ -f "$(BONUS_CLIENT)" ]; then \
+			$(RM) $(BONUS_CLIENT); \
+			echo "$(MYGREEN)⋆ ˚｡⋆ $(RESET) -» $(BONUS_CLIENT) «- $(RESET)file removed $(MYGREEN)✔$(RESET)"; \
+		fi; \
+		if [ -f "$(BONUS_SERVER)" ]; then \
+			$(RM) $(BONUS_SERVER); \
+			echo "$(MYGREEN)⋆ ˚｡⋆ $(RESET) -» $(BONUS_SERVER) «- $(RESET)file removed $(MYGREEN)✔$(RESET)"; \
 		fi; \
 	else \
 		echo "Nothing to be done for 'fclean'."; \
@@ -153,6 +176,6 @@ $(MFA_MANDATORY_HEADER):
 # ℙ𝕙𝕠𝕟𝕪 ℝ𝕦𝕝𝕖𝕤 #
 # ───୨ৎ──── ⑅ ♡ ⑅  ────୨ৎ────
 
-.PHONY: clean fclean re all library 
+.PHONY: clean fclean re all library
 
 #  ૮ ˶ᵔ ᵕ ᵔ˶ ა                               ✧₊⁺✧₊ ᓚᘏᗢ

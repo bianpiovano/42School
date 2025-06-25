@@ -6,7 +6,7 @@
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 18:14:59 by bpiovano          #+#    #+#             */
-/*   Updated: 2025/02/03 20:31:48 by bpiovano         ###   ########.fr       */
+/*   Updated: 2025/06/20 14:12:41 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,15 @@
 //  ────── ⑅ ♡ ⑅  ──────
 // 𝕄𝕪 ℙ𝕖𝕣𝕤𝕠𝕟𝕒𝕝 𝕃𝕚𝕓𝕣𝕒𝕣𝕪 //
 //  ───୨ৎ──── ⑅ ♡ ⑅  ────୨ৎ────
-#include "../library/include/library.h"
+# include "../library/include/library.h"
 
 //  ────── ⑅ ♡ ⑅  ──────
 //•°¯`•• 𝕃𝕚𝕓𝕣𝕒𝕣𝕚𝕖𝕤 ••`¯°•//
 //  ───୨ৎ──── ⑅ ♡ ⑅  ────୨ৎ────
-#include <signal.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <sys/types.h>
+# include <signal.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <sys/types.h>
+# include <unistd.h>
 
 #endif

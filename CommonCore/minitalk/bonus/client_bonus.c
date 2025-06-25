@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   client.c                                           :+:      :+:    :+:   */
+/*   client_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 18:52:36 by bpiovano          #+#    #+#             */
-/*   Updated: 2025/06/23 17:20:24 by bpiovano         ###   ########.fr       */
+/*   Updated: 2025/06/23 17:18:50 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	main(int argc, char **argv)
 	server_pid = ft_atoi(argv[1]);
 	if (server_pid <= 0)
 	{
-		write(2, "Please insert a valid PID\n", 26);
+		write(2, "Please insert a valid PID♡\n", 30);
 		return (1);
 	}
 	if (kill(server_pid, 0) == -1)
