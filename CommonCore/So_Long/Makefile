@@ -34,10 +34,26 @@ MYLIB_ADD	= -L$(MYLIB_DIR) -lmylib
 
 #    𝔽𝕦𝕟𝕔𝕥𝕚𝕠𝕟 𝔽𝕚𝕝𝕖𝕤    #
 # ───୨ৎ──── ⑅ ♡ ⑅  ────୨ৎ──── 
-SRCS 		= src/game/draw.c \
-			  src/game/events.c \
-			  src/game/game.c \
-			  src/game/map.c 
+SRCS 		= src/draw/draw.c \
+				src/draw/draw_player.c \
+				src/draw/load_resources.c \
+				src/events/collectibles.c \
+				src/events/display.c \
+				src/events/events.c \
+				src/events/moves.c \
+				src/game/game.c \
+				src/map/map_load.c \
+				src/map/map_read.c \
+				src/map/map_utils.c \
+				src/map/map_validation.c \
+				src/clean/clean.c \
+				src/checker/copy_for_play.c \
+				src/checker/first_check.c \
+				src/checker/map_closed.c \
+				src/checker/playable_map.c \
+				src/checker/playable_map2.c \
+				src/checker/second_check.c \
+				src/checker/third_check.c 
 
 INCS = $(MLX_INCS) \
 		$(MYLIB_INCS) \

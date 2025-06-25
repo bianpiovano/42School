@@ -22,6 +22,7 @@ STR_SRCS = libft/ft_strlen.c \
            libft/ft_strlcat.c \
            libft/ft_strchr.c \
            libft/ft_strrchr.c \
+		   libft/ft_strcmp.c \
            libft/ft_strncmp.c \
            libft/ft_strnstr.c \
            libft/ft_strdup.c \
@@ -55,7 +56,8 @@ CHAR_SRCS = libft/ft_isalnum.c \
 # ℂ𝕠𝕟𝕧𝕖𝕣𝕤𝕚𝕠𝕟 𝕒𝕟𝕕 𝕌𝕥𝕚𝕝𝕚𝕥𝕪 𝔽𝕦𝕟𝕔𝕥𝕚𝕠𝕟𝕤 #
 # ───୨ৎ──── ⑅ ♡ ⑅  ────୨ৎ────
 UTIL_SRCS = libft/ft_atoi.c \
-            libft/ft_itoa.c
+            libft/ft_itoa.c \
+            libft/ft_sprintf.c
 
 #•°¯`•• 𝔽𝕚𝕝𝕖 𝔻𝕖𝕤𝕔𝕣𝕚𝕡𝕥𝕠𝕣 𝔽𝕦𝕟𝕔𝕥𝕚𝕠𝕟𝕤 ••`¯°•#
 # ───୨ৎ──── ⑅ ♡ ⑅  ────୨ৎ────

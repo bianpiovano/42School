@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bpiovano <	bpiovano@student.42luxembour    +#+  +:+       +#+        */
+/*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:42:31 by bpiovano          #+#    #+#             */
-/*   Updated: 2025/03/14 15:14:30 by bpiovano         ###   ########.fr       */
+/*   Updated: 2025/06/24 19:33:48 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,14 @@
 //•°¯`•• 𝕃𝕚𝕓𝕣𝕒𝕣𝕚𝕖𝕤 ••`¯°•//
 //  ───୨ৎ──── ⑅ ♡ ⑅  ────୨ৎ────
 
+# include "../get_next_line/get_next_line.h"
 # include <limits.h>
+# include <stdarg.h>
 # include <stddef.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
-# include "../get_next_line/get_next_line.h"
 
 //  ────── ⑅ ♡ ⑅  ──────
 // 𝕊𝕥𝕣𝕚𝕟𝕘 𝕄𝕒𝕟𝕚𝕡𝕦𝕝𝕒𝕥𝕚𝕠𝕟 𝔽𝕦𝕟𝕔𝕥𝕚𝕠𝕟𝕤 //
@@ -100,6 +101,9 @@ void			ft_putnbr_fd(int n, int fd);
 //  ───୨ৎ──── ⑅ ♡ ⑅  ────୨ৎ────
 
 void			ft_putchar(char c);
+int				ft_strcmp(const char *s1, const char *s2);
+int				ft_sprintf(char *str, const char *fmt, ...);
 
 #endif
+
 //  ૮ ˶ᵔ ᵕ ᵔ˶ ა                               ✧₊⁺✧₊ ᓚᘏᗢ

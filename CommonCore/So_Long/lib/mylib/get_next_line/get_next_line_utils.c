@@ -6,7 +6,7 @@
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 14:43:00 by bpiovano          #+#    #+#             */
-/*   Updated: 2025/01/11 11:46:59 by bpiovano         ###   ########.fr       */
+/*   Updated: 2025/06/20 18:27:25 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,21 +55,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	str[j] = '\0';
 	return (str);
-}
-
-size_t	ft_strlen(const char *str)
-{
-	int	i;
-
-	if (!str)
-		return (0);
-	i = 0;
-	while (*str)
-	{
-		i++;
-		str++;
-	}
-	return (i);
 }
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
