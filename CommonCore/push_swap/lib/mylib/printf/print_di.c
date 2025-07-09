@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/06 15:01:32 by bpiovano          #+#    #+#             */
-/*   Updated: 2025/07/06 15:55:31 by bpiovano         ###   ########.fr       */
+/*   Created: 2025/07/08 14:11:54 by bpiovano          #+#    #+#             */
+/*   Updated: 2025/07/08 14:11:59 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,15 @@
 int	print_di(int n)
 {
 	int			count;
+	long		num;
 
 	count = 0;
-	if (n < 0)
+	num = n;
+	if (num < 0)
 	{
 		count += print_ch('-');
-		n = -n;
+		num = -num;
 	}
-	count += print_un(n);
+	count += print_un((unsigned int)num);
 	return (count);
 }

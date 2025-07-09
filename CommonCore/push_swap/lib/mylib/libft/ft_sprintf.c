@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/24 17:08:25 by bpiovano          #+#    #+#             */
-/*   Updated: 2025/07/06 15:55:31 by bpiovano         ###   ########.fr       */
+/*   Created: 2025/07/08 14:11:35 by bpiovano          #+#    #+#             */
+/*   Updated: 2025/07/08 15:06:06 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,17 +36,14 @@ static int	ft_write_char(char *dst, char c)
 static int	ft_write_int(char *dst, int n)
 {
 	int		i;
-	int		sign;
 	long	num;
 
 	i = 0;
-	sign = 0;
 	num = n;
 	if (num < 0)
 	{
 		dst[i++] = '-';
 		num = -num;
-		sign = 1;
 	}
 	if (num >= 10)
 		i += ft_write_int(dst + i, num / 10);

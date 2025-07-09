@@ -11,7 +11,7 @@
 
 CC = cc
 LIBCC = ar rcs
-NAME = libmylib.a 
+NAME = libmylib.a
 
 RM = rm -rf
 CFLAGS = -Wall -Werror -Wextra
@@ -62,7 +62,8 @@ CHAR_SRCS = libft/ft_isalnum.c \
 # ───୨ৎ──── ⑅ ♡ ⑅  ────୨ৎ────
 UTIL_SRCS = libft/ft_atoi.c \
             libft/ft_itoa.c \
-            libft/ft_sprintf.c
+            libft/ft_sprintf.c \
+            libft/ft_putchar.c
 
 #•°¯`•• 𝔽𝕚𝕝𝕖 𝔻𝕖𝕤𝕔𝕣𝕚𝕡𝕥𝕠𝕣 𝔽𝕦𝕟𝕔𝕥𝕚𝕠𝕟𝕤 ••`¯°•#
 # ───୨ৎ──── ⑅ ♡ ⑅  ────୨ৎ────
@@ -102,7 +103,7 @@ all: ${NAME}
 ${NAME}: ${OBJS}
 	${LIBCC} ${NAME} ${OBJS}
 
-clean: 
+clean:
 	@echo "$(PINK)Cleaning up object files...$(RESET)"
 	$(RM) $(OBJS)
 

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   stack_init.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/08 13:47:46 by bpiovano          #+#    #+#             */
+/*   Updated: 2025/07/08 16:07:41 by bpiovano         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../include/push_swap.h"
 
 static long	ft_atol(const char *s)
@@ -47,7 +59,7 @@ static void	append_node(t_stack_node **stack, int n)
 	}
 }
 
-void	init_stack_a(t_stack_node **a, char **argv)
+void	init_stack_a(t_stack_node **a, char **argv, int original_argc)
 {
 	long	n;
 	int		i;
@@ -56,12 +68,12 @@ void	init_stack_a(t_stack_node **a, char **argv)
 	while (argv[i])
 	{
 		if (error_syntax(argv[i]))
-			free_errors(a);
+			free_errors(a, argv, original_argc);
 		n = ft_atol(argv[i]);
 		if (n > INT_MAX || n < INT_MIN)
-			free_errors(a);
+			free_errors(a, argv, original_argc);
 		if (error_duplicate(*a, (int)n))
-			free_errors(a);
+			free_errors(a, argv, original_argc);
 		append_node(a, (int)n);
 		i++;
 	}

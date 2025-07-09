@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/08 14:47:19 by bpiovano          #+#    #+#             */
+/*   Updated: 2025/07/08 16:20:50 by bpiovano         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
@@ -20,9 +32,11 @@ typedef struct s_stack_node
 int						error_syntax(char *str_n);
 int						error_duplicate(t_stack_node *a, int n);
 void					free_stack(t_stack_node **stack);
-void					free_errors(t_stack_node **a);
+void					free_errors(t_stack_node **a, char **argv,
+							int original_argc);
 
-void					init_stack_a(t_stack_node **a, char **argv);
+void					init_stack_a(t_stack_node **a, char **argv,
+							int original_argc);
 char					**split(char *s, char c);
 
 void					init_nodes_a(t_stack_node *a, t_stack_node *b);
@@ -53,5 +67,20 @@ void					pb(t_stack_node **b, t_stack_node **a, bool print);
 
 void					sort_three(t_stack_node **a);
 void					sort_stacks(t_stack_node **a, t_stack_node **b);
+
+int						init_first_empty(char **result_array);
+int						fill_split_result(char **result_array, char *s, char c,
+							int words_count);
+
+void					init_and_sort_stacks(t_stack_node **a, t_stack_node **b,
+							char **argv, int original_argc);
+char					**parse_args(int argc, char **argv);
+void					clean_exit(t_stack_node **a, char **argv,
+							int original_argc);
+void					min_on_top(t_stack_node **a);
+void					move_a_to_b(t_stack_node **a, t_stack_node **b);
+void					move_b_to_a(t_stack_node **a, t_stack_node **b);
+int						count_words(char *s, char c);
+void					free_array(char **arr);
 
 #endif

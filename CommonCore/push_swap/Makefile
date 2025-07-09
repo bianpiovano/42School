@@ -8,12 +8,19 @@ SRC_DIR				= sources/
 OBJ_DIR				= obj/
 
 # Compiler and CFlags
-CC					= gcc
-CFLAGS				= -Wall -Werror -Wextra -I
-RM					= rm -f
+CC          = cc
+CFLAGS      = -Wall -Werror -Wextra -I$(INC)
+RM          = rm -f
 
+# $(LIBFT):
+# 	@make CFLAGS="$(LIBCFLAGS)" -C ./lib/mylib
+
+# $(NAME): $(OBJ) $(LIBFT)
+# 	@$(CC) $(CFLAGS) $(OBJ) $(LIBFT) -o $(NAME) -pie
+	
 # Source Files
-COMMANDS_DIR		=	$(SRC_DIR)commands/push.c \
+COMMANDS_DIR		=	$(SRC_DIR)commands/moves.c \
+						$(SRC_DIR)commands/push.c \
 						$(SRC_DIR)commands/rev_rotate.c \
 						$(SRC_DIR)commands/rotate.c \
 						$(SRC_DIR)commands/sort_stacks.c \
@@ -25,6 +32,7 @@ PUSH_SWAP_DIR		=	$(SRC_DIR)push_swap/handle_errors.c \
 						$(SRC_DIR)push_swap/init_b_to_a.c \
 						$(SRC_DIR)push_swap/push_swap.c \
 						$(SRC_DIR)push_swap/split.c \
+						$(SRC_DIR)push_swap/split_utils.c \
 						$(SRC_DIR)push_swap/stack_init.c \
 						$(SRC_DIR)push_swap/stack_utils.c
 
@@ -35,31 +43,31 @@ SRCS 				= $(COMMANDS_DIR) $(PUSH_SWAP_DIR)
 OBJ 				= $(patsubst $(SRC_DIR)%.c,$(OBJ_DIR)%.o,$(SRCS))
 
 # Build rules
-start:				
-					@make all
+start:
+	@make all
 
 $(LIBFT):
-					@make -C ./mylib
+	@make -C ./lib/mylib
 
-all: 				$(NAME)
+all: $(NAME)
 
-$(NAME): 			$(OBJ) $(LIBFT)
-					@$(CC) $(CFLAGS) $(INC) $(OBJ) $(LIBFT) -o $(NAME)
+$(NAME): $(OBJ) $(LIBFT)
+	@$(CC) $(CFLAGS) $(OBJ) -L ./lib/mylib -l mylib -o $(NAME)
 
 # Compile object files from source files
-$(OBJ_DIR)%.o:		$(SRC_DIR)%.c 
-					@mkdir -p $(@D)
-					@$(CC) $(CFLAGS) $(INC) -c $< -o $@
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c
+	@mkdir -p $(@D)
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-					@$(RM) -r $(OBJ_DIR)
-					@make clean -C ./mylib
+	@$(RM) -r $(OBJ_DIR)
+	@make clean -C ./lib/mylib
 
-fclean: 			clean
-					@$(RM) $(NAME)
-					@$(RM) $(LIBFT)
+fclean: clean
+	@$(RM) $(NAME)
+	@$(RM) $(LIBFT)
 
-re: 				fclean all
+re: fclean all
 
 # Phony targets represent actions not files
-.PHONY: 			start all clean fclean re
+.PHONY: start all clean fclean re

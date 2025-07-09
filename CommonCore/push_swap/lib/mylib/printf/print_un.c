@@ -6,7 +6,7 @@
 /*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 17:55:47 by bpiovano          #+#    #+#             */
-/*   Updated: 2025/07/06 15:55:31 by bpiovano         ###   ########.fr       */
+/*   Updated: 2025/07/08 14:08:38 by bpiovano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	print_un(unsigned int n)
 	int				div;
 	int				mod;
 	static char		*digits;
-	
+
 	digits = "0123456789";
 	count = 0;
 	div = n / 10;

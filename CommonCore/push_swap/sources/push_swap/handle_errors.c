@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   handle_errors.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bpiovano <bpiovano@student.42luxembourg    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/08 13:48:42 by bpiovano          #+#    #+#             */
+/*   Updated: 2025/07/08 15:58:07 by bpiovano         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../include/push_swap.h"
 
 int	error_syntax(char *str_n)
@@ -46,9 +58,12 @@ void	free_stack(t_stack_node **stack)
 	*stack = NULL;
 }
 
-void	free_errors(t_stack_node **a)
+void	free_errors(t_stack_node **a, char **argv, int original_argc)
 {
-	free_stack(a);
-	ft_printf("Error\n");
+	if (argv && original_argc == 2)
+		free_array(argv);
+	if (a && *a)
+		free_stack(a);
+	ft_putendl_fd("Error", 2);
 	exit(1);
 }
